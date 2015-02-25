@@ -43,6 +43,7 @@ static volatile float pulse_width = 1.0;
 // Function pointers
 static void(*done_func)(void) = 0;
 
+//Diese Funktion ist Buggy!
 static void icuwidthcb(ICUDriver *icup) {
 	float len = ((float)icuGetWidth(icup) / ((float)TIMER_FREQ / 1000.0)) - pulse_start;
 
